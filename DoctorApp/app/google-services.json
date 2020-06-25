@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "525115247689",
+    "firebase_url": "https://dctrapp1-e98a6.firebaseio.com",
+    "project_id": "dctrapp1-e98a6",
+    "storage_bucket": "dctrapp1-e98a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525115247689:android:84026498db0aef63728398",
+        "android_client_info": {
+          "package_name": "com.example.usman.dctr_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "525115247689-69aiam898gjpsarqmnd6bgre5f8la9p6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.usman.dctr_app",
+            "certificate_hash": "fbe422e6ba60f53518538c63ef36e07164245190"
+          }
+        },
+        {
+          "client_id": "525115247689-ufsgrt3c5nrq251317jumgl9e136j1ar.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_qNFb1aCVqhsjxLpxeNB9rantznFjzn4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "525115247689-ufsgrt3c5nrq251317jumgl9e136j1ar.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
