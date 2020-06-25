@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Welcome.Welcome_to_Whatsapp_Screen">
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Whatsapp"
+        android:gravity="center"
+        android:textSize="33dp"
+        android:textColor="#418C4D"
+        />
+   <com.mikhaellopez.circularimageview.CircularImageView
+       android:layout_gravity="center"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="40dp"
+       android:src="@drawable/whatsapp"
+       />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Read our "
+            android:textSize="14dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Privacy Policy. "
+            android:textColor="#46ADFF"
+            android:textSize="14dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tap 'Agree and continue' to "
+            android:textSize="14dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="accept the "
+            android:textSize="14dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terms of Services "
+            android:textColor="#46ADFF"
+            android:textSize="14dp"
+            />
+    </LinearLayout>
+    <Button
+        android:id="@+id/agree_and_continue_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agree and continue"
+        android:textAllCaps="true"
+        android:background="@color/whatsappColorCode"
+        android:textColor="@color/white"
+        android:layout_margin="30dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="from"
+        android:gravity="center"
+        android:textSize="14dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FACEBOOK"
+        android:padding="15dp"
+        android:letterSpacing="0.15"
+        android:gravity="center"
+        android:textColor="@color/whatsappColorCode"
+        android:textSize="17dp"
+        />
+
+</LinearLayout>
