@@ -6,7 +6,7 @@
         android:id="@+id/search_bar_icon"
         android:title="New group"
         android:icon="@drawable/ic_baseline_search_24"
-        app:showAsAction="ifRoom"
+        app:showAsAction="always"
         />
     <item
         android:id="@+id/new_group"
@@ -34,7 +34,7 @@
         app:showAsAction="never"
         />
     <item
-        android:id="@+id/setting"
+        android:id="@+id/setting_menu"
         android:title="Setting"
         app:showAsAction="never"
         />

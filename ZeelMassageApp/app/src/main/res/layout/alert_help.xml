@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="20dp"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Help Center"
+        android:textSize="25dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="How can we help? Whether you're looking to book a corporate event or just have a question, our PHC Member Services team is here to help!"
+        android:textSize="15dp"
+        />
+    <Button
+        android:id="@+id/btn_sms_live_chat"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="SMS LIVE CHAT"
+        android:background="@color/standard"
+        android:textSize="15dp"
+        android:textColor="#FFFFFF"
+        />
+    <Button
+        android:id="@+id/btn_faqs"
+        android:layout_marginTop="15dp"
+        android:textColor="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="FAQS"
+        android:background="@color/standard"
+        android:textSize="15dp"
+        />
+    <Button
+        android:id="@+id/btn_about"
+        android:layout_marginTop="15dp"
+        android:textColor="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="ABOUT"
+        android:background="@color/standard"
+        android:textSize="15dp"
+        />
+
+</LinearLayout>

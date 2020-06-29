@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showsIn="login_nav_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/login_nav_profile"
+            android:title="Profile"
+            android:icon="@drawable/ic_assignment_black_24dp"
+            />
+        <item
+            android:id="@+id/login_nav_account"
+            android:title="Account"
+            android:icon="@drawable/ic_account_box_black_24dp"
+
+            />
+        <item
+            android:id="@+id/login_nav_promo_code"
+            android:title="Promo COde"
+            android:icon="@drawable/promo"
+            />
+        <item
+            android:id="@+id/login_nav_Join_member"
+            android:title="Join Member"
+            android:icon="@drawable/add_member"
+            />
+        <item
+            android:id="@+id/login_nav_gift_card"
+            android:title="Gift Card"
+            android:icon="@drawable/gift"
+            />
+        <item
+            android:id="@+id/logi_nav_help_center"
+            android:title="Help Center"
+            android:icon="@drawable/help"
+            />
+        <item
+            android:id="@+id/login_nav_store"
+            android:title="Store"
+            android:icon="@drawable/store"
+            />
+    </group>
+
+</menu>

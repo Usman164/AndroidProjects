@@ -52,21 +52,9 @@
         </com.google.android.material.tabs.TabLayout>
     </LinearLayout>
     <androidx.viewpager.widget.ViewPager
-        android:layout_above="@id/textViewMain"
         android:layout_below="@id/layoutTAB"
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </androidx.viewpager.widget.ViewPager>
-    <TextView
-        android:id="@+id/textViewMain"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:text="helllllllllo"
-        android:textSize="30dp"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:textColor="@color/black"
-
-        />
 </RelativeLayout>

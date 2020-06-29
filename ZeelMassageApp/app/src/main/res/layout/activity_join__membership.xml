@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".Join_Membership">
+<Button
+    android:id="@+id/close_membership_view"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_gravity="right"
+    android:background="@drawable/cross"
+    />
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    >
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/alerticon"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Membership Unavailable"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:layout_margin="10dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Primary health care is a whole-of-society approach to health and well-being centred on the needs and preferences of individuals, families and communities.  It addresses the broader determinants of health and focuses on the comprehensive and interrelated aspects of physical, mental and social health and wellbeing."
+        android:textSize="15dp"
+        />
+    <EditText
+        android:id="@+id/membership_edit_text_id"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Zip Code"
+        />
+    <Button
+        android:id="@+id/btn_membership"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Enter"
+        android:background="@color/standard"
+        android:textSize="12dp"
+        android:textColor="#FFFFFF"
+        />
+
+</LinearLayout>
+
+</LinearLayout>

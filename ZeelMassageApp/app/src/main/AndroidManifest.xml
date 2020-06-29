@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.custom_navigation">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Zeel"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".After_Appropriate_Gift_Selected_Personal_Detail">
+        </activity>
+        <activity android:name=".Massage_Duration_Gift" />
+        <activity android:name=".select_your_gift" />
+        <activity android:name=".Gift_Cards">
+        </activity>
+        <activity android:name=".Login_Page" />
+        <activity android:name=".Join_Membership" />
+        <activity android:name=".Massage_Slider_View_Pager" />
+        <activity android:name=".MassageAppointment" />
+        <activity android:name=".ImageClickActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".anim_splach" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+</manifest>

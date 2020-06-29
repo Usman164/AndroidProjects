@@ -5,6 +5,9 @@ public class Chat_Messages_Model {
     private String receiver;
     private String message;
 
+    public Chat_Messages_Model() {
+    }
+
     public String getSender() {
         return sender;
     }

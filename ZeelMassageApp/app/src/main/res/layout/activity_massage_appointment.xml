@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MassageAppointment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@drawable/massage2"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Appointment"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="90dp"
+                />
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:id="@+id/single_massage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="17dp"
+                    android:text="Single"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:clickable="true"
+                    />
+                <TextView
+                    android:id="@+id/couple_massage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="17dp"
+                    android:text="Couple"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:clickable="true"
+                    />
+                <TextView
+                    android:id="@+id/back_to_back_massage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="17dp"
+                    android:text="Back-to-Back"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:clickable="true"
+                    />
+                <TextView
+                    android:id="@+id/chair_massage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="17dp"
+                    android:text="Chair"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:clickable="true"
+                    />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <include
+                layout="@layout/massage1_card_view"
+                />
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

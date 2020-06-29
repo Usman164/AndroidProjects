@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="20dp"
+    >
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/alerticon"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PHC"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:layout_margin="10dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Primary health care is a whole-of-society approach to health and well-being centred on the needs and preferences of individuals, families and communities.  It addresses the broader determinants of health and focuses on the comprehensive and interrelated aspects of physical, mental and social health and wellbeing."
+        android:textSize="15dp"
+        />
+    <Button
+        android:id="@+id/btn_knowledge"
+        android:layout_margin="20dp"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="I Acknowledge"
+        android:background="@color/standard"
+        android:textSize="12dp"
+        android:textColor="#FFFFFF"
+        />
+
+</LinearLayout>

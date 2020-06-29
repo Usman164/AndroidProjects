@@ -1,0 +1,53 @@
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:gravity="center_horizontal"
+android:padding="20dp"
+    >
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Enter Promo Code"
+    android:textSize="20dp"
+    android:layout_margin="10dp"
+    />
+<EditText
+    android:id="@+id/promo_text"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="15dp"
+    android:textColor="#000000"
+    />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="right"
+        >
+        <Button
+            android:id="@+id/promo_cancel_btn"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="Cancel"
+            android:layout_gravity="right"
+            android:background="@android:color/transparent"
+            android:textSize="15dp"
+            android:backgroundTint="@color/standard"
+            />
+        <Button
+            android:id="@+id/promo_enter_btn"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="Enter"
+            android:layout_gravity="right"
+            android:background="@android:color/transparent"
+            android:textSize="15dp"
+            android:backgroundTint="@color/standard"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>

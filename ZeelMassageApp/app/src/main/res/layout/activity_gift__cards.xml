@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Gift_Cards"
+    android:orientation="vertical">
+    <include
+        layout="@layout/gift_card_tollbar"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please choose your gift recipient's location first. Then choose your gift"
+        android:textSize="15dp"
+        android:gravity="center"
+        />
+
+        <Button
+            android:id="@+id/gift_location_id_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:background="@color/standard"
+            android:text="Dummy Text"
+            android:textColor="#FFFFFF"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000"
+            />
+        <Button
+            android:id="@+id/gift_1_id_btn"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Singal Massage"
+            android:background="@color/standard"
+            android:textColor="#FFFFFF"
+            />
+        <Button
+            android:id="@+id/gift_2_id_btn"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Couple Massage"
+            android:background="@color/standard"
+            />
+        <Button
+            android:id="@+id/gift_3_id_btn"
+            android:layout_marginTop="20dp"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Massage Membership"
+            android:background="@color/standard"
+            />
+        <Button
+            android:id="@+id/gift_4_id_btn"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Massage Packages"
+            android:textColor="#FFFFFF"
+            android:background="@color/standard"
+            />
+        <Button
+            android:id="@+id/gift_5_id_btn"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Other Amount"
+            android:textColor="#FFFFFF"
+            android:background="@color/standard"
+            />
+    </LinearLayout>
+
+</LinearLayout>

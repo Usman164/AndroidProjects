@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="activedot">#F64F4F</color>
+    <color name="inactivedot">#808A89</color>
+    <color name="standard">#5D66BF</color>
+    <color name="activeBTN">#5D66BF</color>
+    <color name="colorcode">#191920</color>
+    <color name="de_activeBTN">#929298</color>
+</resources>

@@ -4,22 +4,26 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.whatsapp.Adapter.Message_Adapter;
+import com.example.whatsapp.Models.Chat_Messages_Model;
 import com.example.whatsapp.Models.Register_Model;
-import com.example.whatsapp.Tabbed_Screen.Tabbed_Screen;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -27,10 +31,12 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
 import com.mikhaellopez.circularimageview.CircularImageView;
-import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class Message_Screen extends AppCompatActivity {
 
@@ -41,6 +47,9 @@ public class Message_Screen extends AppCompatActivity {
     Intent intent;
     ImageButton btn_sndText;
     EditText textMessage;
+    Message_Adapter message_adapter;
+    List<Chat_Messages_Model> mChat;
+    RecyclerView recyclerView;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -66,7 +75,7 @@ public class Message_Screen extends AppCompatActivity {
             case R.id.starred_messages:
                 Toast.makeText(this, "Starred message", Toast.LENGTH_SHORT).show();
                 return true;
-            case R.id.setting:
+            case R.id.setting_menu:
                 Toast.makeText(this, "Setting", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.search_bar_icon:
@@ -101,19 +110,30 @@ public class Message_Screen extends AppCompatActivity {
         userName=findViewById(R.id.message_screen_user_id);
         btn_sndText=findViewById(R.id.send_message_btn_id);
         textMessage=findViewById(R.id.text_message_id);
+
+
+        recyclerView=findViewById(R.id.message_recycler_id);
+        recyclerView.setHasFixedSize(true);
+        LinearLayoutManager linearLayoutManager= new LinearLayoutManager(getApplicationContext());
+        linearLayoutManager.setStackFromEnd(true);
+        recyclerView.setLayoutManager(linearLayoutManager);
+
+
         intent=getIntent();
         final String userid=intent.getStringExtra("userID");
-        String imageID=intent.getStringExtra("userImageID");
+        final String imageID=intent.getStringExtra("userImageID");
         userName.setText(userid);
         Glide.with(Message_Screen.this).load(imageID).into(profile_imageView);
+
+
         fuser= FirebaseAuth.getInstance().getCurrentUser();
         reference= FirebaseDatabase.getInstance().getReference("name").child(userid);
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Register_Model list = snapshot.getValue(Register_Model.class);
-//                userName.setText(list.getName());
-//                profile_imageView.setImageResource(R.mipmap.ic_launcher);
+                Register_Model user = snapshot.getValue(Register_Model.class);
+//                readMessages(fuser.getUid(),userid, user.getImageUrl());
+                readMessages(fuser.getUid(),userid);
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
@@ -136,7 +156,7 @@ public class Message_Screen extends AppCompatActivity {
             }
         });
     }
-    private  void sendMessage(String sender,String receiver,String message)
+    public void sendMessage(String sender,String receiver,String message)
     {
         DatabaseReference reference=FirebaseDatabase.getInstance().getReference();
         HashMap<String, Object> hashMap=new HashMap<>();
@@ -147,6 +167,34 @@ public class Message_Screen extends AppCompatActivity {
 
         reference.child("Chats").push().setValue(hashMap);
 
+    }
+
+    public void readMessages(final String myid, final String userid){
+        mChat= new ArrayList<>();
+        reference= FirebaseDatabase.getInstance().getReference("Chats");
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                mChat.clear();
+                for (DataSnapshot snapshot : dataSnapshot.getChildren())
+                {
+                    Chat_Messages_Model chat=snapshot.getValue(Chat_Messages_Model.class);
+                    if (chat.getReceiver().equals(myid)  &&  chat.getSender().equals(userid)
+                    || chat.getReceiver().equals(userid)  &&  chat.getSender().equals(myid))
+                    {
+                        mChat.add(chat);
+                    }
+//                    message_adapter = new Message_Adapter(Message_Screen.this,mChat,imageUrl);
+                    message_adapter = new Message_Adapter(Message_Screen.this,mChat);
+                    recyclerView.setAdapter(message_adapter);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
 }

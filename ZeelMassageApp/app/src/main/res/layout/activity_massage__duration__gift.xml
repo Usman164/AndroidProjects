@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".Massage_Duration_Gift">
+<include
+    layout="@layout/gift_card_tollbar"
+    />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="20dp"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GIFT"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/massage_type_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Massage Type"
+        android:textSize="15dp"
+        android:layout_marginLeft="-40dp"
+        android:textAlignment="center"
+        />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        >
+        <TextView
+            android:id="@+id/duration_time_changeable_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your text here"
+            android:textSize="13dp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_marginTop="70dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Massage Duration"
+            android:textSize="13dp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            />
+        <NumberPicker
+            android:id="@+id/massage_duration_selector_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            />
+        <Button
+            android:id="@+id/massage_duration_next_btn"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:text="Next"
+            android:layout_gravity="right"
+            android:layout_margin="10dp"
+            android:background="@color/standard"
+            android:textColor="#FFFFFF"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>
